@@ -1,0 +1,405 @@
+<!-- 深海都市 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>深海都市</title>
+    <link rel="stylesheet" href="scenario-stylesheet.css">
+    <link rel="icon" href="../img/mfk.PNG">
+    <meta name="description" content="シナリオ：深海都市">
+
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+        $('a[href^="#"]').click(function(){
+        var speed = 500;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+        });
+    });
+    </script>
+</head>
+<body>
+<div class="body">
+    <!-- header -->
+    <header id="TOP">
+        <nav class="navigation">
+            <ul class="flex">
+                <li><a href="../mf-coc.html">HOME</a></li>
+                <li><a href="../mf-coc.html#chara">探索者紹介</a></li>
+                <li><a href="../mf-coc.html#story">シナリオ紹介</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h3>深海都市</h3>
+    <div class="un_line"></div>
+
+    <!-- はじめに -->
+    <section>
+        <h4>はじめに</h4>
+        推奨人数は2人だが、それ以上でもそれ以下でも構わない。<br>
+        人数によって選択が変わりやすい場合もあるため、必要であれば【NPC】を追加してもよい。<br>
+        本シナリオではクトゥルフ神話TRPGサプリメント「クトゥルフ2015」を使用する。<br>
+        可能であれば用意してあることが望ましい。<br>
+
+        <br>※ 2021/11/21現在 シナリオは未完成です。読み物としてお楽しみくだい。
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- 更新情報 -->
+    <section>
+        <h4>更新情報</h4>
+        <ul>
+            <li>2018年頃　　 制作開始</li>
+            <li>2021/11/21　HP用レイアウト編集(本編未完成)</li>
+        </ul>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- 探索者 -->
+    <section>
+        <h4>探索者について</h4>
+        結末の選択次第で探索者は障害を負う可能性もある。<br>
+        本シナリオでは奇妙な探索者【深きものとの混血種】を採用している。該当する探索者は狂気表も一部変更される。<br>
+        以下、【混血種】は「深きものとの混血種の探索者」、【探索者】は「混血種でない探索者」を指す。<br><br>
+
+        【混血種】は初期から&lt;水泳&gt;技能に+20%される。怪しまれないよう他の探索者にも技能値ボーナスを与える。<br>
+        ※ 選択ルールのため、適応せずともよい。<br>
+        導入をスムーズに行うために芸術家がいると良い。<br><br>
+
+        <h5>【探索者】の性別設定</h5>
+            【探索者】の性別によってシナリオ内の日記に登場する人物の性別が変わる。<br>
+            ここで設定することで、該当箇所の整理を行い必要がなくなる。<br>
+            ※ 設定しなくともシナリオ進行に影響はない。<br>
+            <label><input type="radio" name="maker" onclick="formSwitch()" checked>男性</label>
+            <label><input type="radio" name="maker" onclick="formSwitch()">女性</label><br>
+            設定確認用：<span class="sex">彼</span><br><br>
+
+           <!-- java script -->
+            <script>
+                function formSwitch() {
+                    hoge = document.getElementsByName('maker');
+                    // var target = document.getElementById("target");
+                    if (hoge[0].checked) {
+                        $('.sex').each(function() {
+                            var str = $(this).text().replace(/彼女/g, "彼");
+                            $(this).text(str);
+                        });
+                    } else if (hoge[1].checked) {
+                        $('.sex').each(function() {
+                            var str = $(this).text().replace(/彼/g, "彼女");
+                            $(this).text(str);
+                        });
+                    }
+                }
+                window.addEventListener('load', formSwitch());
+            </script>
+
+        <h5>【混血種】を該当探索者名に変更</h5>
+            探索者名を入力してボタンを押すと、以降の【混血種】が該当する探索者名に変更される。<br>
+            ※ 変更しなくともシナリオ進行に影響はない。<br>
+            <input type="text" id="chara-name-mix" />
+            <input type="button" id="button1" value="変更" /><br>
+            変更確認用：<span class="change" id="old-name-mix">【混血種】</span><br>
+
+            <!-- java script -->
+            <script>
+            $("#button1").click(function () {
+                const old_tx = $("#old-name-mix").val();
+                const tx = $("#chara-name-mix").val();
+                $('.change').each(function() {
+                    var str = $("this").text().replace(old_tx, tx);
+                    $(this).text(str);
+                });
+            });
+            </script>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- KP事前情報 -->
+    <section>
+        <h4>KP事前情報</h4>
+        <br>
+        <h5>深きもの</h5>
+        殺されない限り寿命がない。群の中で最も長寿なものがダゴン・ハイドラとなる。クトゥルフを崇拝している。<br><br>
+
+        <h5>深き者との混血種</h5>
+        身体の変化は一方的であり、戻ることはない。いずれは人間社会から追放されることは不変の事実である。<br>
+        進行が進み末期になると夢に深きものが訪れるようになり、広大な水中都市の暮らしを知る。<br>
+        最終段階になると深きものが迎えにくる。<br>
+        10%の混血種は最後まで変化しきらない(=人間でも深きものでもない)。<br><br>
+
+        <h5>オリジナル設定</h5>
+        魔術により深きものの血を追い出せば、僅かな確率で人間に戻ることが可能である。<br>
+        ・遺伝子を書き換え別人になる。<br>
+        ・別の人間と精神交換を行う。<br>
+
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- 場面一覧 -->
+    <section id="list_link">
+        <h4>場面一覧</h4>
+        <ul>
+            <li><a href="#sec1">開幕</a></li>
+            <li><a href="#sec2">展示会</a></li>
+            <li><a href="#sec3">夢</a></li>
+            <li><a href="#sec4">芸術家の街</a></li>
+            <li><a href="#sec5">街全体</a></li>
+            <li><a href="#sec6">カフェ</a></li>
+            <li><a href="#sec7">図書館</a></li>
+            <li><a href="#sec8">美術館</a></li>
+            <li><a href="#sec9">海</a></li>
+            <li><a href="#sec10">アトリエ</a></li>
+            <li><a href="#sec11">終幕</a></li>
+        </ul>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- 開幕 -->
+    <section id="sec1">
+        <h4>開幕</h4>
+        芸術家が複数の作者が出展する展覧会に作品を出すこととなった。<br>
+        他の探索者は招待を受けたので訪ねることとなる。<br>
+        展覧会に行く前日の夜、<span class="change">【混血種】</span>は夢を見る。<br><br>
+
+        <h5>夢</h5>
+        ひとりの男がいる。男は大きなキャンバスに絵を描いていた。<br>
+        それはまるで、大きな街が深海に飲み込まれてしまったかのように蒼々とした絵だった。<br>
+        男が振り返る。その顔は靄で覆われていた。<br>
+
+        <div class="link"><a href="#list_link">場面一覧へ</a></div>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- 展示会 -->
+    <section id="sec2">
+        <h4>展示会</h4>
+        複数の作者が各々客人を招待していることもあり、展示室はそれなりに賑わっている。<br>
+        アサリの貝殻にペイントをして物語を成すような小さなものや、骨格標本にゴスロリの服を着せたようなものなど幅広い作品があり、客人はそれぞれ自分の好みの作者と話し合っている。作品が売れることもあるようだ。<br><br>
+        
+        一通り作品を観て回っていると、展示室の隅に忘れられたかのように置かれている絵画を見つける。<br>
+        それは<span class="change">【混血種】</span>が夢で見た絵画と全く同じものだった。作品名は「深海都市」。<br><br>
+
+        <h5>深海都市</h5>
+        街が深海に飲み込まれてしまったかのように蒼々とした絵だ。<br>
+        作者名は【否(ひ)】。ペンネームらしく、本名は不明である。周りを見渡しても作者らしき人はいない。<br>
+        海外でも活動しているようで、【not】というペンネームらしい。<br>
+        作品はいずれも深海に飲み込まれた街の絵であり、そのすべての作品名が「深海都市」となっている。<br>
+        &lt;オカルト&gt;「深海都市」が展覧会に出展された街では、行方不明者が出るという噂がある。<br>
+
+        <div class="link"><a href="#list_link">場面一覧へ</a></div>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- 夢 -->
+    <section id="sec3">
+        <h4>夢</h4>
+        その日の夜、探索者は皆同じ夢を見る。<br><br>
+        
+        真っ白な空間に「深海都市」の絵画が飾られていた。<br>
+        不思議と身体が惹かれてゆく。絵に触れたい。水がほしい。海がほしい。<br>
+        あなたは絵画に手を触れた。<br>
+        瞬間、姿を現した水があなたを飲み込む。突然のことに驚きはしたが、不思議と居心地がいい。<br>
+        まるでゆりかごに揺られているような――あなたは意識を手放した。<br>
+
+        <div class="link"><a href="#list_link">場面一覧へ</a></div>
+    </section>
+
+    <div class="un_line"></div>
+    
+    <!-- 芸術家の街 -->
+    <section id="sec4">
+        <h4>芸術家の街</h4>
+        目を覚ますと、そこは街だった。<br>
+        しっとりと水を含んだ風が潮の香りを伴って髪に絡みつく。<br>
+        頭上の空には太陽が見えず、黒と錯覚するほど深い蒼で覆われている。<br>
+        まるで街全体が深海に沈んでしまったかのように蒼かった。<br>
+        嫌でも脳裏に考えが浮かぶ。ここは「深海都市」なのではないか。<br>
+        絵画の中に迷い込んでしまった探索者はこの不気味な体験にSAN値チェック0/1<br>
+        ※ MPを5消費する。<br><br>
+        
+        ※ 今後登場する人物はみな嘘をつかない。しかし認識の仕方や知識量に差があるためちぐはぐしている。<br>
+        ※ <span class="change">【混血種】</span>は発狂するたびに進行度が進む。そのたびにステータスを変化させること。<br><br>
+        
+        探索者が茫然としていると、街の住人であろう男(進行度1)が声をかけてくる。<br>
+        「大丈夫ですか？」<br><br>
+        
+        彼に違和感を抱く。<br>
+        金色の髪に青い瞳。明らかに日本人ではないのに言葉が通じる。<br><br>
+        
+        彼は探索者に優しい。<br>
+        「あなたたちも【not】に救われたのですか？」<br>
+        「ここにいる人は皆、【not】に救われ、護られている。彼には感謝しかない」<br><br>
+
+        <h5>街について</h5>
+        「街について尋ねると、彼は隠すことなく教えてくれる。※ 以下の情報しか知らない<br>
+        「僕も最近この街に来たばかりであまり詳しくはないのだけど…」<br><br>
+
+        ・ここにいるのは皆、恐ろしい夢に悩まされていた人たち。<br>
+        ・この街にいる間は恐ろしい夢を見なくて済む。<br>
+        ・この街をつくり、僕らを招き入れてくれるのが【not】。<br>
+        ・この街の人間は皆、新たな仲間を歓迎する。<br>
+        上記のことは全混血種に共通している。基本混血種は嘘をつかない。<br><br>
+
+        <h5>恐ろしい夢</h5>
+        まるで海の中のような場所に、逞しい人影が複数ある。それらは何かの儀式を行っているようで…やがて巨大な影が辺りを覆う。<br>
+        その影は不気味に大きく、まるでタコの触手のように蠢いていた。<br><br>
+        
+        「帰り方？ 知らないよ。僕らは帰りたくなんてないんだから」<br><br>
+        
+        街には一通りの施設が揃っており、行きたいところに行けばだいたいのことはできる。<br>
+        主な施設は　 ●<a href="#sec6">カフェ</a>　●<a href="#sec7">図書館</a>　●<a href="#sec8">美術館</a>　(→●<a href="#sec11">アトリエ</a>)　●<a href="#sec9">海</a>
+        
+        <div class="link"><a href="#list_link">場面一覧へ</a></div>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- 街全体 -->
+    <section id="sec5">
+        <h4>街全体</h4>
+        決して多くはないものの、それなりに人数がある。<br>
+        様々な国籍の人種。しかし彼らの会話はすべて理解することができる。<br>
+        【KP情報】外に出歩いているのは基本的には進行度１･２の人物。３以降の者はあまり出歩かない。<br>
+
+        <div class="link"><a href="#list_link">場面一覧へ</a></div>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- カフェ -->
+    <section id="sec6">
+        <h4>カフェ</h4>
+        こぢんまりとしたカフェだ。ちぐはぐとしたランプが多数飾られており、橙色の明かりが店内を薄暗く照らす。<br>
+        海をモチーフにしたかのようなステンドガラスが明かりを反射して輝いていた。<br>
+        【KP情報】店内が薄暗いのは店主の進行度が進んでいるため。聞かれた場合は普通に答えても良い。<br><br>
+        
+        店主らしき男(進行度２)が気さくに声をかけてくる。<br>
+        「いらっしゃい。新入りかな？」<br>
+        「この街は大きいけれど人数は多くはないから、だいたいの人とは顔見知りなんだ」<br><br>
+        
+        店主に&lt;目星&gt;店主の体つきは逞しく、目がギョロリとしていた。<br><br>
+        
+        【KP情報】店主とは基本は世間話ばかりだが、街について尋ねたいことがあれば知っている限り答えてくれる。<br>
+        しかしすべてを知っているわけではないし、聞かれたことしか答えない。だって聞かれてないもん。<br><br>
+
+        <h5>カフェについて</h5>
+        ・おすすめ料理はナポリタンだけど、食べたいものがあればなんでもつくるよ。<br>
+        ・材料は定期的に彼が外の世界から持ってきてくれるんだ。<br>
+        ・昼と夜で客層は違うかな。(昼は進行度1･2の者、夜はそれ以上進行している者)<br><br>
+
+        <h5>街について</h5>
+        ・街の人間の共通点は「恐ろしい夢から逃れるために街へ招待された」こと。<br>
+        ・帰り方は知らないし知りたいとも思わない。しかし前にその話をしてた奴がいた気がする。「結界」がなんだか言っていた。どこに行ったんだろうか。<br>
+
+        <div class="link"><a href="#list_link">場面一覧へ</a></div>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- 図書館 -->
+    <section id="sec7">
+        <h4>図書館</h4>
+        本棚が壁一面にしきつめられ、今にも溢れそうなほど多数の本が収蔵されている。<br>
+        まるでこの世界の全ての本がここに集まっているようだ。司書などはいない。誰もいない。<br>
+        【KP情報】出版されている世界中の本はここにある。しかし個人本や魔導書などは住民が書いたものしかない。<br><br>
+        
+        探索者が本の種類を指定して探索した場合<br>
+        &lt;図書館&gt;所蔵されている本であるならばすべて見つけることができる。<br><br>
+        
+        &lt;幸運&gt;and&lt;図書館&gt;出版されていない本を見つける。古びたノートには誰かの日記が殴り書きされていた。<br><br>
+        
+        『日記』<br>
+        寂しい。孤独が好きだと信じていたが、それは孤独を知らなかったからだった。<br>
+        水中都市の夢を見ることは見なくなったが、その代償の孤独に私一人で耐えきれるだろうか。<br>
+        仲間がほしい。誰かいないのか。私のような者は。誰か。<br>
+        【KP情報】日記2<br>
+
+        <div class="link"><a href="#list_link">場面一覧へ</a></div>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- 美術館 -->
+    <section id="sec8">
+        <h4>美術館</h4>
+
+        『日記』<br>
+        他人を招いた。罵られても恨まれても構わないと思っていたが、感謝をされた。<br>
+        どうやら私と同じ悩みを抱えていたようだ。仲間がいたのだ。<br>
+        私たちは何者なのだろうか。これを解明できれば、また<span class="sex">彼</span>に会えるようになるだろうか。<br>
+        【KP情報】日記3<br>
+
+        <div class="link"><a href="#list_link">場面一覧へ</a></div>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- 海 -->
+    <section id="sec9">
+        <h4>海</h4>
+        フードを深く被った誰かがいる。
+
+        <div class="link"><a href="#list_link">場面一覧へ</a></div>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- アトリエ -->
+    <section id="sec10">
+        <h4>アトリエ</h4>
+
+        『日記』<br>
+        夢を見る。水中都市で魚人が暮らしているようだ。<br>
+        日に日に鮮明になっていく水中都市での暮らしは、決して悪いものではないような気がした。<br>
+        しかし、その気持ちに伴うように破壊衝動に駆られる日も増えていく。別の何かが、私を塗り替えようとしている。<br>
+        このままでは<span class="sex">彼</span>に迷惑をかけてしまう。優しい<span class="sex">彼</span>のことだ。そんな私のことを、きっと許してしまうのだろう。<br>
+        それはいけない。私はこの世界を出よう。<br>
+        願わくは、また<span class="sex">彼</span>に会えることを。<br>
+        【KP情報】日記1<br>
+
+        <div class="link"><a href="#list_link">場面一覧へ</a></div>
+    </section>
+
+    <div class="un_line"></div>
+
+    <!-- 終幕 -->
+    <section id="sec11">
+        <h4>終幕</h4>
+
+        <div class="link"><a href="#list_link">場面一覧へ</a></div>
+    </section>
+
+    <div class="un_line"></div>
+    
+
+    <!-- おわりに -->
+    <section>
+        <h4>おわりに</h4>
+
+    </section>
+
+    <!-- footer -->
+    <footer>
+        (c)2021 mfnrsan<br>
+        <a href="#">to top</a>
+    </footer>
+</div>
+</body>
+</html>
