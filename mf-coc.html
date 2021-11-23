@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>mf's page</title>
+    <link rel="stylesheet" href="mf-coc.css">
+    <link rel="icon" href="img/mfk.PNG">
+    <meta name="description" content="HTMLとCSSの練習をしつつ、CoCで遊んだ産物を紹介するHPです。">
+
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+    $('a[href^="#"]').click(function(){
+        var speed = 500;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+    });
+    });
+    </script>
+</head>
+
+<body>
+<div class="body">
+    <!-- header -->
+    <header id="TOP">
+        <nav class="navigation">
+            <ul class="flex">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#chara">探索者紹介</a></li>
+                <li><a href="#story">シナリオ紹介</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- profile -->
+    <div class="container profile">
+        <div class="row">
+            <div class="icon col-12 col-sm-6">
+                <img src="img/mfk.PNG" width="200" height="200">
+            </div>
+            <div class="info col-12 col-sm-6">
+                <h3>もふこ</h3>
+                卓復帰勢。<br>
+                身内卓で遊び続けて5年目? 6年目?<br>
+                気が向いたらシナリオも書きます。<br>
+                HTMLとCSSの練習をしつつ、<br>CoCの探索者を紹介します。<br>
+                JSは難しい。<br>
+                twitter: <a href="https://twitter.com/mfnrsan" target="_blank">也も</a><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="un_line"></div>
+
+    <!-- character list -->
+    <div class="character-list">
+        <h4>CoC 探索者一覧</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <ul>
+                        <li><a href="#Murasaki">田中 紫</a></li>
+                        <li><a href="#Kiro">篠崎 きいろ</a></li>
+                        <li><a href="#Midori">佐々木 みどり</a></li>
+                        <li><a href="#Kanako">村上 かな子</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <ul>
+                        <li><a href="#Hikari">衣笠 ひかり</a></li>
+                        <li><a href="#Melissa">月野 メリッサ</a></li>
+                        <li><a href="#Te-ri">猫民 テーリ</a></li>
+                        <li><a href="#Hibiki">猫民 ヒビキ</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <ul>
+                        <li><a href="#Momo">松竹梅 桃</a></li>
+                        <li><a href="#Manabu">植野 学</a></li>
+                        <li><a href="#Haruki">熊田 はるき</a></li>
+                        <li><a href="#Ei">西園寺 衛</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <ul>
+                        <li><a href="#Hanae">森 華絵</a></li>
+                        <li><a href="#Sen">有馬 千</a></li>
+                        <li><a href="#Akane">一条 茜</a></li>
+                        <li><a href="#Azami">白虎 あざみ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="un_line"></div>
+
+    <!-- character -->
+    <div class="character" id="chara">
+        <h4>CoC　探索者紹介</h4>
+        <div class="container">
+            <div class="row">
+                <!-- 田中 紫 -->
+                <div id="Murasaki" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Murasaki.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>田中 紫</h5>
+                        たなか むらさき<br>
+                        xx歳女性。大学生。キャバ嬢。<br>
+                        「罪の身代わり」<br>
+                        「時間狂い」<br>
+                        <a href="" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 篠崎 きいろ -->
+                <div id="Kiro" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Kiro.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>篠崎 きいろ</h5>
+                        しのさき きいろ<br>
+                        18歳女性。大学生。<br>
+                        「銀河鉄道のような夜のような夜(身内作/仮名)」<br>
+                        <a href="https://charasheet.vampire-blood.net/md3bf0a24928097da74a524ef8916d71d" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 佐々木 みどり -->
+                <div id="Midori" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Midori.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>佐々木 みどり</h5>
+                        ささき みどり<br>
+                        28歳女性。警察官。<br>
+                        「共有せよ」<br>
+                        <a href="https://charasheet.vampire-blood.net/m7fa67fb6255918674cf7a2468a2d06ab" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 村上 かな子 -->
+                <div id="Kanako" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Kanako.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>村上 かな子</h5>
+                        むらかみ かなこ<br>
+                        20歳女性。大学生(心理学科)。<br>
+                        「コミケ帰りに雨が降る(身内作/仮名)」<br>
+                        <a href="https://charasheet.vampire-blood.net/m1c3a635ee0c715ff3c08618faa0357db" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 衣笠 ひかり -->
+                <div id="Hikari" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Hikari.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>衣笠 ひかり</h5>
+                        きぬがさ ひかり<br>
+                        26歳女性。カメラマン。<br>
+                        「記憶にない場所」<br>
+                        <a href="https://charasheet.vampire-blood.net/mc520f173fef1c2d5eb8a90d28a6ca702" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 月野 メリッサ -->
+                <div id="Melissa" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Melissa.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>月野 メリッサ</h5>
+                        つきの めりっさ<br>
+                        22歳女性。メンヘラ大学生(情報学科)。<br>
+                        「マザーグース・レストラン」<br>
+                        「GUILTY or Not GUILTY」<br>
+                        <a href="https://charasheet.vampire-blood.net/m4ad10794c4fc8cc7db7b28fef49b72e1" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 猫民 テーリ -->
+                <div id="Te-ri" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Te-ri.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>猫民 テーリ</h5>
+                        ねこたみ てーり<br>
+                        27歳女性。曲芸師。<br>
+                        「潜水艦にて(身内作/仮名)」<br>
+                        「」<br>
+                        <a href="https://charasheet.vampire-blood.net/m9f4177f399278b0f175598adc649fe6a" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 猫民 ヒビキ -->
+                <div id="Hibiki" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Hibiki.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>猫民 ヒビキ</h5>
+                        ねこたみ ひびき<br>
+                        13歳男性。中学生。狩猟家。<br>
+                        未出演<br>
+                        <a href="https://charasheet.vampire-blood.net/m851c36f247129b7ff445359e6ccfaea4" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 松竹梅 桃 -->
+                <div id="Momo" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Momo.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>松竹梅 桃</h5>
+                        しょうちくばい もも<br>
+                        25歳男性。ファッションデザイナー見習い。<br>
+                        「」<br>
+                        <a href="https://charasheet.vampire-blood.net/m8208184a376f2b5bfdd2cb7dc55bf760" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 植野 学 -->
+                <div id="Manabu" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Manabu.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>植野 学</h5>
+                        うえの まなぶ<br>
+                        31歳男性。学芸員。<br>
+                        「虚箱(身内改変シナリオ)」<br>
+                        <a href="https://charasheet.vampire-blood.net/m130e280cfec4dd48408729bba6f444e2" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 熊田 はるき -->
+                <div id="Haruki" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Haruki.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>熊田 はるき</h5>
+                        くまだ はるき<br>
+                        29歳男性。タクシードライバー。<br>
+                        未出演<br>
+                        <a href="https://charasheet.vampire-blood.net/me7befe0cb7bfbeece77a74745ff73370" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 西園寺 衛 -->
+                <div id="Ei" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Ei.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>西園寺 衛</h5>
+                        さいおんじ えい<br>
+                        38歳男性。ゴーストハンター。<br>
+                        「GhoulHunt(クトゥルフ神話AR)」<br>
+                        <a href="" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 森 華絵 -->
+                <div id="Hanae" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Hanae.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>森 華絵</h5>
+                        もり はなえ<br>
+                        19歳女性。美大生。<br>
+                        「XXXXY」<br>
+                        <a href="https://charasheet.vampire-blood.net/m21ac2e4a89cc1dd3531b32efebfaa6e0" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 有馬 千 -->
+                <div id="Sen" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Sen.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>有馬 千</h5>
+                        ありま せん<br>
+                        31歳女性。動物学者。<br>
+                        「狂気山脈」<br>
+                        <a href="" target="_blank">character sheet</a>
+                    </div>
+                </div>
+                <!-- 一条 茜 -->
+                <div id="Akane" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Akane.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>一条 茜</h5>
+                        いちじょう あかね<br>
+                        26歳女性。医者。<br>
+                        ???<br>
+                        <a href="https://charasheet.vampire-blood.net/md64cba60f2a797ba74b6adf29787e860" target="_blank">character sheet</a><br>
+                        注意：キャラクターシートに重大なネタバレあり
+                    </div>
+                </div>
+                <!-- 白虎 あざみ -->
+                <div id="Azami" class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-12">
+                        <img src="img/Azami.PNG" width="200" height="200">
+                    </div>
+                    <div class="col-12">
+                        <h5>白虎 あざみ</h5>
+                        びゃっこ あざみ<br>
+                        19歳女性。財閥令嬢。<br>
+                        ???<br>
+                        <a href="https://charasheet.vampire-blood.net/mce1a3f7e43651d0299839333d72da298" target="_blank">character sheet</a><br>
+                        注意：キャラクターシートに重大なネタバレあり
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="un_line"></div>
+
+    <!-- scenario -->
+    <div class="scenario" id="story">
+        <h4>シナリオ紹介</h4>
+        <div class="container">
+            <!-- クリスマスの人形劇 -->
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 sec">
+                    <h5>クリスマスの人形劇</h5>
+                    導入でクリスマスツリーが燃え上がるシティシナリオです。<br>
+                    初期に身内向けに書いたものなので、細かいの処理が甘かったり話をつなげるのが難しかったりする箇所があります。<br>
+                    <a href="scenario/xmas-doll-story.html" target="_blank">scenario page</a>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <!-- 深海都市 -->
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 sec">
+                    <h5>深海都市</h5>
+                    本人も気づいていない真実を持ったPCが登場します。<br>
+                    大まかなプロットは完成していますが、詳細の詰めがまだなのでもう少しお待ちください。<br>
+                    <a href="scenario/shinkai-city.html" target="_blank">scenario page</a>(制作途中)
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <!-- 月の蜜蜂(仮) -->
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 sec">
+                    <h5>月の蜜蜂(仮)</h5>
+                    寝ても覚めても夜のシナリオです。<br>
+                    大まかなプロットは完成していますが、詳細の詰めがまだなのでもう少しお待ちください。<br>
+                    PCの最後の行動次第でキャンペーンに続きます。(キャペーンにはまだ手をつけていません)<br>
+                    <!-- <a href="" target="_blank">scenario page</a> -->
+                    coming soon...?
+                </div>
+                <div class="col-1"></div>
+            </div>
+
+        </div> 
+    </div>
+
+    <div class="un_line"></div>
+
+    <!-- footer -->
+    <footer>
+        (c)2021 mfnrsan<br>
+        <a href="#">to top</a>
+    </footer>
+
+</div>
+
+</body>
+</html>
