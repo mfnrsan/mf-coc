@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+.body{
+    font-family: 'Courier New', "M PLUS Rounded 1c", Courier, monospace;
+    color: grey;
+    margin: auto;
+    font-weight: lighter;
+}
+
+/* un_line */
+.un_line{
+    border-bottom: solid 1px lightgray;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* flex */
+.flex{
+    display: flex;
+}
+
+/* list */
+ul{
+    list-style: none;
+}
+ul li a{
+    color: grey;
+}
+ul li a:hover{
+    color: orange;
+}
+
+/* header */
+header{
+    background-color: grey;
+}
+header li{
+    padding: 10px
+}
+header li a{
+    color: white;
+}
+
+/* footer */
+footer{
+    color: white;
+    background-color: grey;
+    padding: 15px 0;
+    text-align: center;
+}
+footer a{
+    color: white;
+}
+
+/* title */
+h3{
+    padding-top: 30px;
+    margin-left: 20px;
+}
+
+/* section */
+section {
+    padding: 0 50px;
+}
+section a{
+    color: grey;
+}
+section .link a{
+    color: darkgrey;
+    margin-right: 20px;
+    float: right;
+}
