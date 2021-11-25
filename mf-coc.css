@@ -106,6 +106,9 @@ footer a{
 .character h5{
     padding-top: 10px;
 }
+.character a{
+    color: grey;
+}
 
 /* scenario */
 .scenario .sec{
