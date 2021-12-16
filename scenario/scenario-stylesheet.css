@@ -10,7 +10,7 @@
 /* un_line */
 .un_line{
     border-bottom: solid 1px lightgray;
-    margin-top: 30px;
+    padding-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -69,4 +69,11 @@ section .link a{
     color: darkgrey;
     margin-right: 20px;
     float: right;
+}
+
+/* note */
+.note{
+    border: solid 0.5px grey;
+    padding: 10px;
+    margin: 5px 5px 50px;
 }
