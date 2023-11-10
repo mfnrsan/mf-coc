@@ -58,6 +58,14 @@ h3{
     margin-left: 20px;
 }
 
+/* scene list */
+.scene_list ul{
+    height: 185px;
+}
+.scene_list ul li{
+    padding-top: 5px; 
+}
+
 /* section */
 section {
     padding: 0 50px;
@@ -69,6 +77,11 @@ section .link a{
     color: darkgrey;
     margin-right: 20px;
     float: right;
+}
+
+/* font style */
+.italic{
+    font-style: italic;
 }
 
 /* note */
