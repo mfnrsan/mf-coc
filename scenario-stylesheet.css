@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+.body{
+    font-family: 'Courier New', "M PLUS Rounded 1c", Courier, monospace;
+    color: grey;
+    margin: auto;
+    font-weight: lighter;
+}
+
+/* un_line */
+.un_line{
+    border-bottom: solid 1px lightgray;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* flex */
+.flex{
+    display: flex;
+}
+
+/* list */
+ul{
+    list-style: none;
+}
+ul li a{
+    color: grey;
+}
+ul li a:hover{
+    color: orange;
+}
+
+/* header */
+header{
+    background-color: grey;
+}
+header li{
+    padding: 10px
+}
+header li a{
+    color: white;
+}
+
+/* footer */
+footer{
+    color: white;
+    background-color: grey;
+    padding: 15px 0;
+    text-align: center;
+}
+footer a{
+    color: white;
+}
+
+/* title */
+h3{
+    padding-top: 30px;
+    margin-left: 20px;
+}
+
+/* scene list */
+.scene_list ul{
+    height: 185px;
+}
+.scene_list ul li{
+    padding-top: 5px; 
+}
+
+/* section */
+section {
+    padding: 0 50px;
+}
+section a{
+    color: grey;
+}
+section .link a{
+    color: darkgrey;
+    margin-right: 20px;
+    float: right;
+}
+
+/* font style */
+.italic{
+    font-style: italic;
+}
+
+/* note */
+.note{
+    border: solid 0.5px grey;
+    padding: 10px;
+    margin: 5px 5px 10px;
+}
+
+/* quote */
+p .italic {
+    position: relative;
+    padding: 10px 15px 10px 30px;
+    box-sizing: border-box;
+    font-style: italic;
+}
+blockquote {
+    position: relative;
+    padding: 10px 15px 10px 30px;
+    box-sizing: border-box;
+    font-style: italic;
+}
+blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
+}
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}
+
+/* tab box */
+/* tab layout */
+.tabbox input{
+    display: none;
+}
+.tabbox label{
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+.tab{
+    color: lightgrey;
+}
+.tab:hover{
+    color: darkgrey;
+}
+input:checked+.tab{
+    color: grey;
+}
+.tabcontent{
+    display: none;
+/* tab_content */
+    padding: 10px 20px;
+}
+#tab1:checked ~ #tab1_content{
+    display: block;
+}
+#tab2:checked ~ #tab2_content{
+    display: block;
+}
+#tab3:checked ~ #tab3_content{
+    display: block;
+}
+#tab4:checked ~ #tab4_content{
+    display: block;
+}
+/* tab box2 */
+input:checked+.tab2{
+    color: grey;
+}
+.tab2{
+    color: lightgrey;
+}
+.tab2:hover{
+    color: darkgrey;
+}
+#tab2_1:checked ~ #tab2_1_content{
+    display: block;
+}
+#tab2_2:checked ~ #tab2_2_content{
+    display: block;
+}
+#tab2_3:checked ~ #tab2_3_content{
+    display: block;
+}
+#tab2_4:checked ~ #tab2_4_content{
+    display: block;
+}
+#tab2_5:checked ~ #tab2_5_content{
+    display: block;
+}
