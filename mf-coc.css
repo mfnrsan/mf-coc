@@ -25,6 +25,11 @@
     background-color: black;
 }
 
+/* font style */
+.italic{
+    font-style: italic;
+}
+
 /* un_line */
 .un_line{
     border-bottom: solid 1px lightgray;
@@ -117,3 +122,5 @@ footer a{
 .scenario h5{
     padding-top: 20px;
 }
+
+/*  */
