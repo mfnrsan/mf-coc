@@ -20,7 +20,7 @@
 }
 
 /* list */
-ul{
+ul li{
     list-style: none;
 }
 ul li a{
@@ -56,14 +56,6 @@ footer a{
 h3{
     padding-top: 30px;
     margin-left: 20px;
-}
-
-/* scene list */
-.scene_list ul{
-    height: 185px;
-}
-.scene_list ul li{
-    padding-top: 5px; 
 }
 
 /* section */
