@@ -30,6 +30,11 @@ ul li a:hover{
     color: orange;
 }
 
+/* text color */
+.text_red{
+    color: rgb(225, 115, 145);
+}
+
 /* header */
 header{
     background-color: grey;
@@ -81,6 +86,28 @@ section .link a{
     border: solid 0.5px grey;
     padding: 10px;
     margin: 5px 5px 10px;
+}
+
+/* kp info */
+.kp {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 1px grey;
+    border-radius: 8px;
+}
+.kp .kp_info {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    background: #FFF;
+}
+.kp p {
+    margin: 0; 
+    padding: 0;
 }
 
 /* quote */
